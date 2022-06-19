@@ -39,6 +39,12 @@ def crearNaveL(tipo):
     else:
         pass
 
+
+    #llamando a las funciones que contiene los metodos
+    metodoDespegar(tipo)
+    metodoSoltar(tipo)
+    
+
 #Funcion para crear nave Tripulada
 def crearNaveT(tipo):  
     tipo = tipo          
@@ -61,6 +67,12 @@ def crearNaveT(tipo):
         print('-'.center(40,'-'))
     else:
         pass
+
+    #llamando a las funciones que contiene los metodos
+    metodoDespegar(tipo)
+    metodoAcelerar(tipo)
+    metodoFrenar(tipo)
+    metodoOrbitar(tipo)
 
 #Funcion para crear nave robotica
 def crearNaveR(tipo):
@@ -94,3 +106,138 @@ def crearNaveR(tipo):
             print('-'.center(40,'-'))
             print(robotica.detalleNave())
             print('-'.center(40,'-'))
+    else:
+        pass
+
+    #llamando a las funciones que contiene los metodos
+    metodoDespegar(tipo)
+    metodoAcelerar(tipo)
+    metodoFrenar(tipo)
+    metodoOrbitar(tipo)
+
+"""Funciones para instanciar los metodos de comportamientos de las clases hijas""" 
+
+#funcion para metodo despegar          
+def metodoDespegar(tipo):
+    if tipo == 1 or tipo == 2 or tipo == 3: 
+        print('-'.center(40,'-'))
+        print(f'Despegar Nave\n 1 - Si\n 0 - No')
+        despegar = int(input('\n>> '))
+        if despegar == 1 or despegar == 0:
+            if tipo == 1:
+                lanzadera = Lanzadera('','','','',0,0,0,0,'','')
+                # llamando al metodo despegar de la nave lanzadera
+                print('-'.center(40,'-'))
+                print(lanzadera.despegar(despegar))
+                print('-'.center(40,'-'))
+            elif tipo == 2:
+                # llamando al metodo despegar de la nave tripulada
+                tripulada = Tripulada('','','','',0,0,0,0,'',0,'')
+                print('-'.center(40,'-'))
+                print(tripulada.despegar(despegar))
+                print('-'.center(40,'-'))
+            elif tipo == 3:
+                # llamando al metodo despegar de la nave robotica
+                robotica = Robotica('','','','',0,0,0,0,'','')
+                print('-'.center(40,'-'))
+                print(robotica.despegar(despegar))
+                print('-'.center(40,'-'))
+        else:
+            print('Ingreso un valor erroneo')
+    else:
+        print('Ingreso un valor erroneo')
+
+#Funcion para el metodo acelerar
+def metodoAcelerar(tipo):
+    if tipo == 2 or tipo == 3: 
+        print('-'.center(40,'-'))
+        print(f'Acelerar Nave\n 1 - Si\n 0 - No')
+        acelerar = int(input('\n>> '))
+        if acelerar == 1 or acelerar == 0:
+            if tipo == 2:
+                # llamando al metodo despegar de la nave tripulada
+                tripulada = Tripulada('','','','',0,0,0,0,'',0,'')
+                print('-'.center(40,'-'))
+                print(tripulada.acelerar(acelerar))
+                print('-'.center(40,'-'))
+            elif tipo == 3:
+                # llamando al metodo despegar de la nave robotica
+                robotica = Robotica('','','','',0,0,0,0,'','')
+                print('-'.center(40,'-'))
+                print(robotica.acelerar(acelerar))
+                print('-'.center(40,'-'))
+        else:
+            print('Ingreso un valor erroneo')
+    else:
+        print('Ingreso un valor erroneo')
+
+# funcion para el metodo frenar
+def metodoFrenar(tipo):
+    if tipo == 2 or tipo == 3: 
+        print('-'.center(40,'-'))
+        print(f'Frenar Nave\n 1 - Si\n 0 - No')
+        frenar = int(input('\n>> '))
+        if frenar == 1 or frenar == 0:
+            if tipo == 2:
+                # llamando al metodo despegar de la nave tripulada
+                tripulada = Tripulada('','','','',0,0,0,0,'',0,'')
+                print('-'.center(40,'-'))
+                print(tripulada.frenar(frenar))
+                print('-'.center(40,'-'))
+            elif tipo == 3:
+                # llamando al metodo despegar de la nave robotica
+                robotica = Robotica('','','','',0,0,0,0,'','')
+                print('-'.center(40,'-'))
+                print(robotica.frenar(frenar))
+                print('-'.center(40,'-'))
+        else:
+            print('Ingreso un valor erroneo')
+    else:
+        print('Ingreso un valor erroneo')
+
+# funcion para el metodo orbitar
+def metodoOrbitar(tipo):
+    if tipo == 2 or tipo == 3: 
+        print('-'.center(40,'-'))
+        print(f'Orbitar Nave\n 1 - Si\n 0 - No')
+        orbitar = int(input('\n>> '))
+        if orbitar == 1 or orbitar == 0:
+            if tipo == 2:
+                # llamando al metodo despegar de la nave tripulada
+                tripulada = Tripulada('','','','',0,0,0,0,'',0,'')
+                print('-'.center(40,'-'))
+                print(tripulada.orbitar(orbitar))
+                print('-'.center(40,'-'))
+            elif tipo == 3:
+                # llamando al metodo despegar de la nave robotica
+                robotica = Robotica('','','','',0,0,0,0,'','')
+                print('-'.center(40,'-'))
+                print(robotica.orbitar(orbitar))
+                print('-'.center(40,'-'))
+        else:
+            print('Ingreso un valor erroneo')
+    else:
+        print('Ingreso un valor erroneo')
+
+# funcion para el metodo soltar
+def metodoSoltar(tipo):
+    if tipo == 1: 
+        print('-'.center(40,'-'))
+        print(f'soltar Nave\n 1 - Si\n 0 - No')
+        soltar = int(input('\n>> '))
+        if soltar == 1:
+            # llamando al metodo despegar de la nave tripulada
+            lanzadera = Lanzadera('','','','','',0,0,0,0,'')
+            print('-'.center(40,'-'))
+            print(lanzadera.soltar(soltar))
+            print('-'.center(40,'-'))
+        elif soltar == 0:
+            # llamando al metodo despegar de la nave robotica
+            lanzadera = Lanzadera('','','','','',0,0,0,0,'')
+            print('-'.center(40,'-'))
+            print(lanzadera.soltar(soltar))
+            print('-'.center(40,'-'))
+        else:
+            print('Ingreso un valor erroneo')
+    else:
+        print('Ingreso un valor erroneo')
