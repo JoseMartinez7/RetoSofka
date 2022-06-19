@@ -35,13 +35,11 @@ class Main():
                     print('error') 
             elif crear == 0:  
                 print(f'Exit')
-                break
-            else:
-                print('Ingreso un valor erroneo')     
+                break    
         print('-'.center(40,'-'))
 
 
 if __name__ == '__main__':
-    
+
     #Ejecutando clase main
      Main.main()
