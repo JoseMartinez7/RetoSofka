@@ -119,8 +119,6 @@ class Spacecraft(ABC):
 
     """Metodos de comportamiento"""
 
-    def orbitar(self):
-        pass
     
     # Metodos abstractos de comportamiento
     
