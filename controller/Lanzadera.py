@@ -41,9 +41,9 @@ class Lanzadera(Spacecraft):
     def despegar(self, despegar):
         self.__despegar = despegar
         if self.__despegar == 0:
-            return f'Nave: {self.nombre} >>> No a despegado <<<'
+            return f'Nave: {self.__nombre} >>> No a despegado <<<'
         elif self.__despegar == 1:
-            return f'Nave: {self.nombre} >>> Despegando <<<'
+            return f'Nave: {self.__nombre} >>> Despegando <<<'
 
     def acelerar(self):
         self.__acelerar = self
