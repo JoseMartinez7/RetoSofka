@@ -22,32 +22,23 @@ def main():
             print('Creando Nave Espacial'.center(40,'-'))
 
             # Condiciones para validar el tipo de nave a crear
+
             #nave lanzadera
             if tipo == 1:
-                crear = crearNaveL(tipo)
-                
-
-
+                crear = crearNaveL(tipo)    
             #nave tripulada
             elif tipo == 2:
-                crear = crearNaveT(tipo)
-                
-
+                crear = crearNaveT(tipo)      
             #nave robotica
             elif tipo == 3:
-                crear = crearNaveR(tipo)
-                    
-        elif crear == 0:
-            
+                crear = crearNaveR(tipo)          
+        elif crear == 0:  
             print(f'Exit')
-        
             break
         else:
-            print('Ingreso un valor erroneo')
-            
+            print('Ingreso un valor erroneo')     
     print('-'.center(40,'-'))
 
 
 if __name__ == '__main__':
-
     main()
