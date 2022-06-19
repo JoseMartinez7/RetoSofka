@@ -32,9 +32,9 @@ class Robotica(Spacecraft):
     def orbitar(self, orbitar):
         self.__orbitar = orbitar
         if self.__orbitar == 0:
-            return f'Nave: {self.__nombre} >>> no esta en orbita <<<'
+            return f'Nave: {self.nombre} >>> no esta en orbita <<<'
         elif self.__orbitar == 1:
-            return f'Nave: {self.__nombre} >>> en orbita <<<'
+            return f'Nave: {self.nombre} >>> en orbita <<<'
        
 
     #sobre escritura de metodos abstractos de la clase Spacecraft
@@ -42,23 +42,23 @@ class Robotica(Spacecraft):
     def despegar(self, despegar):
         self.__despegar = despegar
         if self.__despegar == 0:
-            return f'Nave: {self.__nombre} >>> No a despegado <<<'
+            return f'Nave: {self.nombre} >>> No a despegado <<<'
         elif self.__despegar == 1:
-            return f'Nave: {self.__nombre} >>> Despegando <<<'
+            return f'Nave: {self.nombre} >>> Despegando <<<'
 
     def acelerar(self,acelerar):
         self.__acelerar = acelerar
         if self.__acelerar == 1:
-            return f'Nave: {self.__nombre} >>> acelerando <<<'
+            return f'Nave: {self.nombre} >>> acelerando <<<'
         elif self.__acelerar  == 0:
-            return f'Nave: {self.__acelerar} >>> desacelerando <<<'
+            return f'Nave: {self.nombre} >>> desacelerando <<<'
 
     def frenar(self, frenar):
         self.__frenar = frenar
         if self.__frenar == 1:
-            return f'Nave: {self.__nombre} >>> Frenando <<<'
+            return f'Nave: {self.nombre} >>> Frenando <<<'
         elif self.__frenar  == 0:
-            return f'Comportamiento: {self.__nombre} >>> Mantener velocidad <<<'
+            return f'Comportamiento: {self.nombre} >>> Mantener velocidad <<<'
         
 
 
